@@ -1,19 +1,21 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Login from './components/Login'
+import Signup from './components/Signup'
+import ForgotPassword from './components/ForgotPassword'
 import Home from './components/Home'
-import Panier from './components/Panier'
-import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
-    <div className='container'>
-        <Routes>
-            <Route path='/' element={<Home/>}/> 
-            <Route path='/panier' element={<Panier/>}/> 
-            <Route path='/product_details/:product_id' element={<ProductDetails/>}/> 
-        </Routes>
+    <div>
+      <Routes>
+        <Route path='/' element={<Login/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/forgotPassword' element={<ForgotPassword/>}/>
+        <Route path='/home' element={<Home/>}/>
+      </Routes>
     </div>
   )
 }
 
-export default App
+export default App 
